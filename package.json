@@ -1,6 +1,6 @@
 {
   "name": "mzen-schema-validator-remote",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mZen Schema Validator Remote",
   "main": "./lib/remote",
   "scripts": {
