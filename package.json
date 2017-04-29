@@ -19,5 +19,6 @@
     "sinon": "^1.17.4"
   },
   "dependencies": {
+    "axios": "^0.16.1"
   }
 }
