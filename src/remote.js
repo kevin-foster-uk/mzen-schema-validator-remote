@@ -25,14 +25,14 @@ function doRemote(value, options, name, root)
 
 Validator.remote = function(value, options, name, root) 
 {
-  let url = options && options['url'] ? options['url'] : '';
+  var url = options && options['url'] ? options['url'] : '';
   // Interval is the minimum amount of time betweem requests in milliseconds
-  let interval = options && options['internval'] ? options['internval'] : 1000;
-  let validationId = url + '|' + name;
+  var interval = options && options['internval'] ? options['internval'] : 1000;
+  var validationId = url + '|' + name;
 
   // If this vlaidation id already has arguments set then we have already
   // - queued the request
-  let isQueued = requestArgs[validationId] !== undefined;
+  var isQueued = requestArgs[validationId] !== undefined;
 
   // We set the validation options to a gobal object
   // - these options may be modified multiple times before the actual request is made to the server
