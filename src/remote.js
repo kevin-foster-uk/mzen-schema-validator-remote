@@ -1,17 +1,17 @@
-'use strict';
-
+'use strict'
 var axios = require('axios');
 var Validator = require('mzen-schema/lib/schema/validator');
 
 var requestArgs = {};
 
-function doRemote(value, options, name, root) {
+function doRemote(value, options, name, root) 
+{
   var url = options && options['url'] ? options['url'] : '';
   var method = options && options['method'] ? options['method'] : 'POST';
   var params = options && options['params'] ? options['params'] : {};
   var data = options && options['data'] ? options['data'] : {};
   var timeout = options && options['timeout'] ? options['timeout'] : 5000;
-  var axiosInstance = options && options['axios'] ? options['axios'] : axios.create({ timeout: timeout });
+  var axiosInstance = options && options['axios'] ? options['axios'] : axios.create({timeout: timeout});
 
   data['value'] = value;
 
@@ -23,7 +23,8 @@ function doRemote(value, options, name, root) {
   });
 }
 
-Validator.remote = function (value, options, name, root) {
+Validator.remote = function(value, options, name, root) 
+{
   let url = options && options['url'] ? options['url'] : '';
   // Interval is the minimum amount of time betweem requests in milliseconds
   let interval = options && options['internval'] ? options['internval'] : 1000;
@@ -39,8 +40,8 @@ Validator.remote = function (value, options, name, root) {
 
   var promise = new Promise((resolve, reject) => {
     if (isQueued) {
-      setTimeout(function () {
-        doRemote.apply(null, requestArgs[validationId]).then(response => {
+      setTimeout(function(){
+        doRemote.apply(null, requestArgs[validationId]).then((response) =>{
           resolve(response.data);
         });
         delete requestArgs[validationId];
