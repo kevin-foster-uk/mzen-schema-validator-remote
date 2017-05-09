@@ -23,5 +23,10 @@
   },
   "dependencies": {
     "axios": "^0.16.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
