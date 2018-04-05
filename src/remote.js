@@ -29,7 +29,7 @@ function pathsToObject(paths, data)
 {
   var result = {};
   Object.keys(paths).forEach((fieldName) => {
-    result[fieldName] = ObjectPathAccessor.getPath(paths[fieldName]);
+    result[fieldName] = ObjectPathAccessor.getPath(paths[fieldName], data);
   });
   return result;
 }
