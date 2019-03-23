@@ -1,7 +1,7 @@
 'use strict'
 var axios = require('axios');
-var Validator = require('mzen-schema/lib/schema/validator');
-var ObjectPathAccessor = require('./object-path-accessor');
+var Validator = require('mzen-schema').Validator;
+var ObjectPathAccessor = require('mzen-schema').ObjectPathAccessor;
 
 function doRemote(value, options, name)
 {
