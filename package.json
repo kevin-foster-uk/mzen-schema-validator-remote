@@ -22,7 +22,5 @@
     "should": "^11.2.0",
     "sinon": "^1.17.4"
   },
-  "dependencies": {
-    "axios": "^0.16.1"
-  }
+  "dependencies": {}
 }
